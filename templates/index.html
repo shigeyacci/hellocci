@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>Hello World!</title></head>
+    <body>
+        <script>
+          function addhello(){
+              const hellotext = document.getElementById("hellotext")
+              hellotext.value += "Hello\n"
+          }
+        </script>
+        <h1>Hello World!!</h1>
+        <input id="hellobtn" type="button" value="Click Me!" onclick="addhello()">
+        <br>
+        <textarea id="hellotext" rows="10" cols="30"></textarea>
+     </body>
+</html>

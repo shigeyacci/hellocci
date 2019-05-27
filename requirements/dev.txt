@@ -1,0 +1,3 @@
+Flask==1.0.3
+selenium==3.141.0
+chromedriver-binary==74.0.3729.6.0
