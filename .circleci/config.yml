@@ -9,6 +9,7 @@ jobs:
       - restore_cache:
           key: deps2-{{ .Branch }}-{{ checksum "requirements/dev.txt" }}
       - run:
+          name: Installing python packages
           command: |
             python3 -m venv venv
             . venv/bin/activate
@@ -18,11 +19,13 @@ jobs:
           paths:
             - 'venv'
       - run:
+          name: Running Flask app in the background
           command: |
             . venv/bin/activate
             python hello.py
           background: true
       - run:
+          name: Running Test
           command: |
             . venv/bin/activate
             python test_hello.py
