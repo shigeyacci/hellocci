@@ -2,3 +2,4 @@ Flask==1.0.3
 selenium==3.141.0
 chromedriver-binary==74.0.3729.6.0
 unittest-xml-reporting==2.5.1
+gunicorn==19.9.0
