@@ -3,6 +3,7 @@ import time
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import chromedriver_binary
+import xmlrunner
 
 class HelloTest(unittest.TestCase):
     def setUp(self):
@@ -28,4 +29,6 @@ class HelloTest(unittest.TestCase):
         self.driver.close()
 
 if __name__ == "__main__":
-    unittest.main()
+    unittest.main(
+        testRunner=xmlrunner.XMLTestRunner(output='test-reports'),
+        failfast=False, buffer=False, catchbreak=False)
