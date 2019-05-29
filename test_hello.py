@@ -23,6 +23,8 @@ class HelloTest(unittest.TestCase):
         assert "Hello" in hello_textarea.get_attribute('value')
         hello_button.click()
         assert "Hello\nHello" in hello_textarea.get_attribute('value')
+
+        driver.save_screenshot("test-reports/screen.png")
         time.sleep(5)
 
     def tearDown(self):
